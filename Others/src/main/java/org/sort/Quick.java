@@ -7,8 +7,16 @@ public class Quick {
 
     public static int partition(int[] arr, int low, int high) {
 
+        //когда опорное значение берется по середине и далее ставится вконец для отработки алгоритма
+        int middle = (high+low)/2;
+        //int middle = low + (high-low)/2; либо так определять середину. уточнить
+        swap(arr, middle, high);
+
+        //опорная точка берется крайняя
         int index = high;
         int pivot = arr[index];
+
+
 
             for (int i = low; i < index;) {
                 if (arr[i] > pivot) {
@@ -21,8 +29,6 @@ public class Quick {
                     ++i;
             }
         return index;
-
-
 
 
         /*int pivot = arr[high];
@@ -66,7 +72,6 @@ public class Quick {
 
     public static void main(String[] args) {
         int[] arr = {17, 14, 15, 28, 30, 8, -6, 1, 43, 18};
-        int[] arr2 = {17, 14, 15, 28, 30, 8, -6, 1, 43, 18};
         quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
 
