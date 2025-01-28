@@ -23,6 +23,8 @@ public class Quick {
         return index;
 
 
+
+
         /*int pivot = arr[high];
         int i = (low);
         for (int j = low; j < high; j++) {
